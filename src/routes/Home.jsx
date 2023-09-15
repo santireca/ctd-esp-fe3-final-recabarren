@@ -32,18 +32,20 @@ const Home = () => {
                         className={`${theme === 'light' ? 'bg-indigo-400' : 'bg-my-black'} text-2xl px-8 py-2 text-center font-extrabold text-[#F1F0EF] italic rounded-md bg-opacity-80
                         lg:text-5xl lg:py-5`}
                     >
-                        ¡BIENVENIDOS!
+                        ¡CLÍNICA DH!
                     </h1>
                 </div>
             </div>
-        <div className='py-10 flex justify-center items-center flex-wrap gap-10'>
-        {data ? (
-            data.map((person) => (
-            <Card key={person.id} item={person}/>
-            ))
-        ) : (
-            <p>Loading...</p>
-        )}
+        <div 
+            className='py-10 flex justify-center items-center flex-wrap gap-10'
+        >
+            {data ? (
+                data.map((person) => (
+                <Card key={person.id} item={person}/>
+                ))
+            ) : (
+                <p>Loading...</p>
+            )}
         </div>
     </main>
     )

@@ -53,7 +53,7 @@ export const ContextProvider = ({ children }) => {
 
     return (
         <ContextGlobal.Provider value={value}>
-        {children}
+            {children}
         </ContextGlobal.Provider>
     );
 };

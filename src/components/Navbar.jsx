@@ -72,10 +72,18 @@ const Navbar = () => {
                             className='flex justify-center items-center'
                         >
                             {theme === 'light' && (
-                                <img className='w-10' src="https://res.cloudinary.com/dreso9ye9/image/upload/v1686672097/img.icons8_b3lade.png" alt="" />
+                                <img 
+                                    className='w-10' 
+                                    src="https://res.cloudinary.com/dreso9ye9/image/upload/v1686672097/img.icons8_b3lade.png" 
+                                    alt="" 
+                                />
                             )}
                             {theme === 'dark' && (
-                                <img className='w-10' src="https://res.cloudinary.com/dreso9ye9/image/upload/v1686672072/img.icons8_rnqhur.png" alt="" />
+                                <img 
+                                    className='w-10'
+                                    src="https://res.cloudinary.com/dreso9ye9/image/upload/v1686672072/img.icons8_rnqhur.png" 
+                                    alt="" 
+                                />
                             )}
                         </button>
                     </nav>

@@ -37,7 +37,7 @@ const Favs = () => {
                 className="py-10 flex justify-center items-center flex-wrap gap-10"
             >
                 {storage ? storage.map((doctorFav) => (
-                <Card key={doctorFav} item={doctorFav}/>
+                <Card key={doctorFav} item={doctorFav} />
                 )) : ""}
             </div>
         </div>

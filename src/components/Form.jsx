@@ -18,17 +18,14 @@ const Form = () => {
         event.preventDefault();
 
         if (!inputs.name.trim() || regexName.test(inputs.name)) {
-        setValidation(false);
+            setValidation(false);
         } else if (!inputs.email.trim() || !regexEmail.test(inputs.email)) {
-        setValidation(false);
+            setValidation(false);
+        } else if (inputs.name.length < 5){
+            setValidation(false)
         } else {
-        setValidation(true);
+            setValidation(true);
         }
-
-        setInputs({
-            name: "",
-            email: ""
-        })
     };
 
     const handleOnChange = (event) => {
@@ -97,16 +94,16 @@ const Form = () => {
 
                 {validation === true ? (
                 <div 
-                    className="flex justify-center items-center font-semibold text-[#D99B84]"
+                    className="flex justify-center items-center font-semibold text-gray-600 mt-5"
                 >
                     <span>
-                        ¡Gracias<span className="text-[#84B8D9]"> {inputs.name}</span>, te contactaremos cuanto antes vía mail!
+                        ¡Gracias<span className="text-indigo-600"> {inputs.name}</span>, te contactaremos cuanto antes vía mail!
                     </span>
                 </div>
                 ) : null}
                 {validation === false ? 
                 <div 
-                    className="flex justify-center items-center font-semibold text-red-700"
+                    className="flex justify-center items-center font-semibold text-red-700 text-sm mt-5"
                 >
                     {error}
                 </div> : null}
